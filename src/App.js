@@ -13,7 +13,7 @@ function Video(props) {
   const NewTimeDate = NewDateTime(DateTime);
     return (
         <div className="video">
-            <iframe src={props.url} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe title="video" src={props.url} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             <NewTimeDate date={props.date} />
         </div>
     )
@@ -24,6 +24,7 @@ function VideoList(props) {
 }
 
 export default function App() {
+  // eslint-disable-next-line no-unused-vars
     const [list, setList] = useState([
         {
             url: 'https://www.youtube.com/embed/rN6nlNC9WQA?rel=0&amp;controls=0&amp;showinfo=0',
